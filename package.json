@@ -1,6 +1,6 @@
 {
   "name": "@narwold/import-repos",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "index.js",
   "repository": "git@github.com:narwold/import-repos.git",
   "license": "MIT",
