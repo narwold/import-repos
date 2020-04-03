@@ -25,4 +25,5 @@ Object.entries(repos).forEach(([name, _urls]) => {
   } else {
     run(`git pull`, { cwd: repoPath })
   }
+  run(`yarn install`, { cwd: repoPath })
 })
