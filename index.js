@@ -21,9 +21,8 @@ Object.entries(repos).forEach(([name, _urls]) => {
   const urls = Array.isArray(_urls) ? _urls : [_urls]
   const repoPath = `${importedReposPath}/${name}`
   if (!existsSync(path.join(importedReposPath, name))) {
-    run(urls.map(url => `git clone ${url} ${repoPath}`).join(' || '))
+    run(urls.map((url) => `git clone ${url} ${repoPath}`).join(' || '))
   } else {
     run(`git pull`, { cwd: repoPath })
   }
-  run(`yarn install`, { cwd: repoPath })
 })
